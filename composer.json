@@ -1,0 +1,33 @@
+{
+    "name": "oe2i/laravel",
+    "description": "A Laravel starter kit with Livewire and Volt.",
+    "type": "laravel-starter-kit",
+    "keywords": ["laravel", "starter-kit", "livewire", "volt", "tailwindcss"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anthony Osawere",
+            "email": "anthony@osawere.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "laravel/framework": "^12.0",
+        "livewire/livewire": "^3.0",
+        "livewire/volt": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oe2i\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oe2i\\Laravel\\StarterKitServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

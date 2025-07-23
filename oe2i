@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# This script helps to create a new Laravel project using your starter kit.
+# It's a wrapper around 'composer create-project'.
+
+# Usage:
+#   ./bin/laravel my-new-project
+
+# Check if a project name is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <project-name>"
+    exit 1
+fi
+
+PROJECT_NAME=$1
+VENDOR_NAME="oe2i" # Replace with your actual vendor name
+KIT_NAME="laravel" # Replace with your actual kit name
+
+echo "Creating new Laravel project '$PROJECT_NAME' using '$VENDOR_NAME/$KIT_NAME'..."
+
+composer create-project "$VENDOR_NAME/$KIT_NAME" "$PROJECT_NAME" --remove-vcs
+
+echo "Project '$PROJECT_NAME' created successfully."
+echo "Now, navigate into the project directory and run the install command:"
+echo "cd $PROJECT_NAME"
+echo "php artisan starter-kit:install"
